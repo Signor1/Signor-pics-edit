@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signor | PicsEdit</title>
+    <!-- SEO  -->
+    <meta name="author" content="Omemgboji Emmanuel SignorDev">
+    <meta name="description" content="A simple and easy to use picture editor for enhancing effects on any image">
+    <meta name="title" content="Signor PicsEdit">
+    <meta name="keywords" content="Photo Editor, Pics Editor, SignorDev, Signor, Image Editor, Image effects">
+    <!-- End SEO meta tags  -->
+
+    <!-- PWA  -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="img/logo32.png" />
+    <link rel="apple-touch-icon" href="img/logo96.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#13141f" />
+    <meta name="theme-color" content="#13141f" />
+    <!-- End of PWA  -->
+
+    <!-- FavIcon  -->
+    <link rel="icon" href="img/logo32.png" sizes="32x32" type="image/png">
+    <!-- Compiled CSS  -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Boxicons  -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" />
+    <!-- Fontawesome icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- General Container  -->
+    <div class="container">
+        <!-- Top Nav  -->
+        <header>
+            <div class="logo">
+                <a href="/" class="img-logo">
+                    <img src="img/logo.png" alt="Logo">
+                </a>
+                <div class="logo-text">
+                    <h3>Pics Edit</h3>
+                    <a href="https://signor.vercel.app/" class="dev" target="_blank">
+                        by SignorDev
+                    </a>
+                </div>
+            </div>
+            <div class="aside">
+                <a href="https://github.com/Signor1" target="_blank" class="gitLink"><i
+                        class='bx bxl-github'></i>GitHub</a>
+                <p><span>v</span>1.0</p>
+            </div>
+        </header>
+
+        <!-- Hero Section  -->
+        <div class="hero">
+            <h1>Create Awesome Image Effects<br>
+                using our Pics Editor.</h1>
+
+            <div class="scroll">
+                <span>Scroll</span>
+                <span class="bounce">👇</span>
+            </div>
+
+            <!-- shapes to be animated  -->
+            <div class="bigHalfCircle"></div>
+            <ul class="manyDots">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="smallCircle"></div>
+            <div class="rotatedSquare"></div>
+            <div class="donutShape"></div>
+        </div>
+
+        <!-- Panel for Image Edit  -->
+
+        <div class="panelSection">
+            <h3>Choose the image you want to edit</h3>
+            <div class="panelContainer disable">
+                <div class="wrapper">
+                    <div class="editor-panel">
+                        <div class="filter">
+                            <label for="filter" class="title">Filter Effects</label>
+                            <div class="options">
+                                <button id="brightness" class="active">Brightness</button>
+                                <button id="saturation">Saturation</button>
+                                <button id="inversion">Inversion</button>
+                                <button id="grayscale">Grayscale</button>
+                            </div>
+                            <div class="slider">
+                                <div class="filter-info">
+                                    <p class="name">Brightness</p>
+                                    <p class="value">100%</p>
+                                </div>
+                                <input type="range" value="100" min="0" max="200" id="range">
+                            </div>
+                        </div>
+                        <div class="rotate">
+                            <label for="filter" class="title">Rotate & Flip</label>
+                            <div class="options">
+                                <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                                <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                                <button id="horizontal"><i class="bx bx-reflect-vertical"></i></button>
+                                <button id="vertical"><i class="bx bx-reflect-horizontal"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-img">
+                        <img src="https://www.zaa.go.tz/panel/web-assets/not-available.png" alt="preview-img"
+                            referrerpolicy="no-referrer">
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="reset-filter"><i class='bx bx-reset'></i>Reset Filter </button>
+                    <div class="row">
+                        <input type="file" class="file-input" accept="image/*" hidden>
+                        <button class="choose-img"><i class='bx bx-image-add'></i>Choose Image </button>
+                        <button class="save-img"><i class='bx bx-download'></i>Save Image </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Image Edit Panel  -->
+
+        <!-- Footer section  -->
+        <footer>
+            <p>&copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                <a href="https://signor.vercel.app/" target="_blank">SignorDev.</a>
+                All Right Reserved.
+            </p>
+            <ul>
+                <li><a href="https://github.com/Signor1" target="_blank"><i class='bx bxl-github'></i></a></li>
+                <li><a href="https://twitter.com/OneSignor?t=xTu8ujiP_M3nibDoFjsUUA&s=09" target="_blank"><i
+                            class='bx bxl-twitter'></i></a></li>
+                <li><a href="https://www.linkedin.com/in/emmanuel-omemgboji-4b92b3140" target="_blank"><i
+                            class='bx bxl-linkedin'></i></a></li>
+            </ul>
+        </footer>
+        <!-- End of footer section  -->
+    </div>
+    <!-- End of the general container  -->
+
+    <!-- Javascript file  -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

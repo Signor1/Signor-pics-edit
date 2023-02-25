@@ -1,0 +1,105 @@
+//Importing mQuery
+@import "_mQuery";
+
+.hero {
+    .bigHalfCircle {
+        position: absolute;
+        left: -5rem;
+        top: 20%;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: linear-gradient(to top right, $color3, $color4, $color5);
+
+        //mobile phones
+        @include mediaQuery(767px) {
+            width: 120px;
+            height: 120px;
+            left: -3rem;
+            top: 50%;
+        }
+
+        //iPads
+        @include mediaQuery(1024px, 768px) {
+            left: -5rem;
+            top: 55%;
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    .manyDots {
+        position: absolute;
+        list-style: none;
+        width: 70px;
+        height: auto;
+        right: 0.3rem;
+        top: 50%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.6rem;
+
+        //iPads
+        @include mediaQuery(1024px, 768px) {
+            right: 0.3rem;
+            top: 70%;
+        }
+
+        li {
+            background-color: $color4;
+            height: 6px;
+            border-radius: 50%;
+        }
+    }
+
+    .smallCircle {
+        position: absolute;
+        top: 8%;
+        left: 7%;
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(to top, $color3, $color2);
+        border-radius: 50%;
+    }
+
+    .rotatedSquare {
+        position: absolute;
+        top: 8%;
+        right: 20%;
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(to top right, $color3, $color4, $color5);
+        transform: rotate(45deg);
+        animation: shapes 10s infinite ease-out;
+    }
+
+    .donutShape {
+        position: absolute;
+        bottom: 17%;
+        left: 10%;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        outline: 0.7rem solid $color4;
+        background-color: $color1;
+        animation: shapes 10s infinite ease-out;
+
+        //iPads
+        @include mediaQuery(1024px, 768px) {
+            bottom: 5%;
+            left: 10%;
+        }
+    }
+}
+
+@keyframes shapes {
+
+    0%,
+    100% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(5px) rotate(45deg);
+    }
+}

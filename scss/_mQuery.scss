@@ -1,0 +1,18 @@
+// Media Query 
+@mixin mediaQuery($arg...) {
+    @if length($arg)==1 {
+
+        //mobile phone
+        @media screen and (max-width: nth($arg, 1)) {
+            @content;
+        }
+    }
+
+    @if length($arg)==2 {
+
+        //iPad
+        @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2)) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+/* impoting fontfamily */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//importings
+@import "_variables";
+@import "_mixins";
+@import "_shapesAnime";
+@import "_mQuery";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font1;
+}
+
+*:focus {
+    outline: none;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: $color1;
+}
+
+body {
+    background-color: $color1;
+    width: $full;
+    min-height: $hScreen;
+}
+
+.container {
+    width: $full;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+header {
+    @include Header;
+}
+
+.hero {
+    @include Hero;
+}
+
+.panelSection {
+    @include PanelContainer;
+}
+
+footer {
+    @include Footer;
+}
